@@ -1,0 +1,14 @@
+[user]
+	name = Ben Neely
+	email = ben.neely@kount.com
+[push]
+	default = tracking
+[core]
+	excludesfile = /home/bmn/.gitignore_global
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = log --graph
