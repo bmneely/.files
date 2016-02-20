@@ -2,7 +2,7 @@
 require 'fileutils'
 
 # Install Oh-My-Zsh
-system 'sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"'
+system 'sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"'
 
 ## Install NeoVundle
 system "curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh"
