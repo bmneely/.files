@@ -6,9 +6,12 @@
 [core]
 	excludesfile = /home/bmn/.gitignore_global
 [alias]
-	co = checkout
-	st = status
-	br = branch
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	visual = log --graph
+  co = checkout
+  st = status
+  br = branch
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  visual = log --graph
+  rbo = !git fetch origin master && git rebase origin/master
+  undo = reset --soft HEAD~1
+  alias = config --get-regexp ^alias\\.
