@@ -13,6 +13,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set smarttab
+set backspace=indent,eol,start " backspace over everything in insert mode
 
 map <C-Return> <CR><CR><C-o>k<Tab>
 
