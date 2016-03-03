@@ -5,6 +5,7 @@
 	default = tracking
 [core]
 	excludesfile = /home/bmn/.gitignore_global
+  editor = vim
 [alias]
   co = checkout
   st = status
