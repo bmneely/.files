@@ -39,6 +39,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'airblade/vim-gitgutter'
 
 call neobundle#end()
 
