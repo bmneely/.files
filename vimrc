@@ -34,12 +34,16 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'Shougo/vimproc.vim'
+" NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'jlanzarotta/bufexplorer'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kris89/vim-multiple-cursors'
+NeoBundle 'valloric/MatchTagAlways'
 
 call neobundle#end()
 
@@ -80,3 +84,9 @@ set statusline+=%*
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_quiet_messages = { "type": "style" }
+
+
+
+syntax enable
+filetype plugin indent on
+

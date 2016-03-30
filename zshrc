@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 export TNS_ADMIN=/etc/oracle
 export ORACLE_HOME=/usr/lib/oracle/12.1/client64
 export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-x64/
-
+export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -83,6 +83,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliaseis
 alias j="z"
+alias g="git"
 eval $(thefuck --alias)
 alias zshrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
