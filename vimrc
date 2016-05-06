@@ -14,6 +14,7 @@ set softtabstop=2
 set shiftwidth=2
 set smarttab
 set backspace=indent,eol,start " backspace over everything in insert mode
+set shortmess+=A
 
 map <C-Return> <CR><CR><C-o>k<Tab>
 
@@ -68,6 +69,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+set colorcolumn=240
 
 "==============================================================================
 " Syntastic Settings
