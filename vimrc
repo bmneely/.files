@@ -45,6 +45,10 @@ NeoBundle 'jlanzarotta/bufexplorer'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kris89/vim-multiple-cursors'
 NeoBundle 'valloric/MatchTagAlways'
+NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'L9'
+NeoBundle 'FuzzyFinder'
+NeoBundle 'tpope/vim-fugitive'
 
 call neobundle#end()
 
@@ -78,6 +82,7 @@ set colorcolumn=240
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set statusline+=%{fugitive#statusline()}
 
 "let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
@@ -87,8 +92,14 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 let g:syntastic_quiet_messages = { "type": "style" }
 
-
+"FuzzyFinder
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
 
 syntax enable
 filetype plugin indent on
+
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 
