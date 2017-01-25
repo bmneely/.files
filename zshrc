@@ -84,7 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliaseis
 alias j="z"
 alias g="git"
-eval $(thefuck --alias)
 alias zshrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias phc="phing configure"
