@@ -9,6 +9,13 @@ system "curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/i
 system "sh ./install.sh"
 system "rm ./install.sh"
 
+## Install Z
+system "wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh"
+
+## Create vim directories
+system "mkdir ~/.vim/tmp"
+system "mkdir ~/.vim/backup"
+
 #Install .files
 Dir.glob("*") do |file|
   next if file == '.' || file == '..' || file == ".git"
