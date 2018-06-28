@@ -9,10 +9,10 @@ set tw=0
 set hls
 set ai!
 set hidden
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set smarttab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 set backspace=indent,eol,start " backspace over everything in insert mode
 set shortmess+=A
 
@@ -49,6 +49,7 @@ NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'fatih/vim-go'
 
 call neobundle#end()
 
@@ -102,4 +103,38 @@ filetype plugin indent on
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
+
+"Go specific
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+let g:go_term_enabled = 1
+
+au FileType go nmap gi <Plug>(go-install)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>e <Plug>(go-rename)
+au FileType go nmap <leader>i <Plug>(go-info)
+au FileType go nmap <leader>l :GoLint<CR>
+au FileType go nmap <leader>q :GoImport<space>
+au FileType go nmap <Leader>f <Plug>:GoImpl<space>
+au FileType go nmap <leader>ff <Plug>(go-implements)
+au FileType go vmap <leader>r :GoAddTags<space>
+au FileType go vmap <leader>p :GoPlay<CR>
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>s <Plug>(go-install)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>v <Plug>(go-vet)
+au FileType go nmap <leader>a :GoAlternate<CR>
+au FileType go nmap <leader>ds <Plug>(go-def-split)
+au FileType go nmap <leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <leader>dt <Plug>(go-def-tab)
+au FileType go nmap <leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <leader>gs <Plug>(go-doc-split)
+au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>tc <Plug>(go-coverage-toggle)
 
